@@ -1,10 +1,9 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-   
-    <title>Extensions Options</title>
+<html>
+  <head>
+    <title>AI Summary Settings</title>
     <style>
-        body {
+      body {
         font-family: Arial, sans-serif;
         padding: 20px;
         max-width: 600px;
@@ -45,26 +44,26 @@
         display: none;
       }
     </style>
-</head>
-<body>
+  </head>
+  <body>
     <h1>AI Summary Settings</h1>
-    <div class="form-group">
-        <label for="api-key">Gemini API Key</label>
-        <input type="text" id="api-key" placeholder="Enter your Gemini api key"/>
 
-        <p>
-            you can get an API key from
-            <a href="https://makersuite.google.com/app/apikey" target="_blank"
-            >Google AI Studio   </a>
-            >
-        </p>
+    <div class="form-group">
+      <label for="api-key">Gemini API Key:</label>
+      <input type="text" id="api-key" placeholder="Enter your Gemini API key" />
+      <p>
+        You can get an API key from
+        <a href="https://makersuite.google.com/app/apikey" target="_blank"
+          >Google AI Studio</a
+        >
+      </p>
     </div>
 
     <button id="save-btn">Save Settings</button>
     <p id="success-message" class="success-message">
-            Settings saved successfully!
+      Settings saved successfully!
     </p>
 
     <script src="options.js"></script>
-</body>
+  </body>
 </html>
