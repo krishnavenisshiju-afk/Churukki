@@ -1,69 +1,49 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>AI Summary Settings</title>
-    <style>
-      body {
-        font-family: Arial, sans-serif;
-        padding: 20px;
-        max-width: 600px;
-        margin: 0 auto;
-      }
-      h1 {
-        color: #4285f4;
-      }
-      .form-group {
-        margin-bottom: 20px;
-      }
-      label {
-        display: block;
-        margin-bottom: 5px;
-        font-weight: bold;
-      }
-      input[type="text"] {
-        width: 100%;
-        padding: 8px;
-        box-sizing: border-box;
-        border: 1px solid #ddd;
-        border-radius: 4px;
-      }
-      button {
-        background-color: #4285f4;
-        color: white;
-        border: none;
-        padding: 10px 15px;
-        border-radius: 4px;
-        cursor: pointer;
-      }
-      button:hover {
-        background-color: #3367d6;
-      }
-      .success-message {
-        color: green;
-        margin-top: 10px;
-        display: none;
-      }
-    </style>
+    <title>Churukki</title>
+    <link rel="stylesheet" href="popup.css" />
   </head>
-  <body>
-    <h1>AI Summary Settings</h1>
 
-    <div class="form-group">
-      <label for="api-key">Gemini API Key:</label>
-      <input type="text" id="api-key" placeholder="Enter your Gemini API key" />
-      <p>
-        You can get an API key from
-        <a href="https://makersuite.google.com/app/apikey" target="_blank"
-          >Google AI Studio</a
-        >
-      </p>
+  <body>
+    <div class="container">
+      <!-- Header -->
+      <div class="header">
+        <div>
+          <h1>Churukki ✨</h1>
+          <p>AI-powered article summarizer</p>
+        </div>
+      </div>
+
+      <!-- Summary Type -->
+      <div class="section">
+        <label>Summary Style</label>
+
+        <select id="summary-type">
+          <option value="brief">Brief Summary</option>
+          <option value="detailed">Detailed Summary</option>
+          <option value="bullets">Bullet Points</option>
+        </select>
+      </div>
+
+      <!-- Buttons -->
+      <div class="button-group">
+        <button id="summarize">Summarize</button>
+        <button id="copy-btn">Copy</button>
+      </div>
+
+      <!-- Result -->
+      <div id="result">
+        Select a summary type and click <b>Summarize</b> to generate an AI summary.
+      </div>
+
+      <!-- Footer -->
+      <div class="footer">
+        Powered by Gemini AI
+      </div>
     </div>
 
-    <button id="save-btn">Save Settings</button>
-    <p id="success-message" class="success-message">
-      Settings saved successfully!
-    </p>
-
-    <script src="options.js"></script>
+    <script src="config.js"></script>
+    <script src="popup.js"></script>
   </body>
 </html>
